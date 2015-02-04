@@ -23,10 +23,11 @@ def word_permutations(word):
 
 letters = [chr(i) for i in range(65,90+1)]
 vowels = ['a','e','i','o','u']
-words = set([])
-for letter in letters:
-    word_list = open(letter+" Words.txt").read().splitlines()
-    words = words.union(set(word_list))
+#words = set([])
+#for letter in letters:
+#    word_list = open(letter+" Words.txt").read().splitlines()
+#    words = words.union(set(word_list))
+words = set(open("wordsEn.txt").read().splitlines())
 while words:
     word = words.pop()
     ideas = word_permutations(word)
@@ -38,4 +39,4 @@ while words:
             print single_idea
         
                 
-    
+ 
